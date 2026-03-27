@@ -8,12 +8,12 @@ load_dotenv()
 LOGS = logging.getLogger(__name__)
 
 class Var:
-    API_ID = getenv("API_ID")
-    API_HASH = getenv("API_HASH")
+    API_ID = 29245477
+    API_HASH = "0abc83883262245c90ca337b7a0375c4"
     BOT_TOKEN = getenv("BOT_TOKEN")
     DB_URI = getenv("DB_URI")
     DB_NAME = getenv("DB_NAME")
-    BAN_SUPPORT = getenv("BAN_SUPPORT", "https://t.me/about_zani")
+    BAN_SUPPORT = getenv("BAN_SUPPORT", "https://t.me/EternalsHelplineBot")
     FSUB_LINK_EXPIRY = int(getenv("FSUB_LINK_EXPIRY", "120"))
     CHANNEL_ID = int(getenv("CHANNEL_ID", "0"))
     MHCHANNEL_URL = getenv("MHCHANNEL_URL", "https://t.me/+t0weAQsq_-1lYmJl")
