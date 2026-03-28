@@ -15,8 +15,8 @@ class Var:
     DB_NAME = "cluster0"
     BAN_SUPPORT = getenv("BAN_SUPPORT", "https://t.me/EternalsHelplineBot")
     FSUB_LINK_EXPIRY = int(getenv("FSUB_LINK_EXPIRY", "120"))
-    CHANNEL_ID = int(getenv("CHANNEL_ID", "-1003848633651"))
-    MHCHANNEL_URL = getenv("MHCHANNEL_URL", "https://t.me/+t0weAQsq_-1lYmJl")
+    CHANNEL_ID = "-1003848633651"
+    MHCHANNEL_URL = "https://t.me/+t0weAQsq_-1lYmJl"
     ANIME = getenv("ANIME", "Is It Wr2131ong to Try to Pi123ck Up Girls in a Dungeon?")
     CUSTOM_BANNER = getenv("CUSTOM_BANNER", "https://ibb.co/5xjBCXKp")
 
