@@ -11,8 +11,8 @@ class Var:
     API_ID = 29245477
     API_HASH = "0abc83883262245c90ca337b7a0375c4"
     BOT_TOKEN = getenv("BOT_TOKEN")
-    DB_URI = getenv("DB_URI")
-    DB_NAME = getenv("DB_NAME")
+    DB_URI = ""
+    DB_NAME = "cluster0"
     BAN_SUPPORT = getenv("BAN_SUPPORT", "https://t.me/EternalsHelplineBot")
     FSUB_LINK_EXPIRY = int(getenv("FSUB_LINK_EXPIRY", "120"))
     CHANNEL_ID = int(getenv("CHANNEL_ID", "0"))
@@ -21,15 +21,15 @@ class Var:
     CUSTOM_BANNER = getenv("CUSTOM_BANNER", "https://ibb.co/5xjBCXKp")
 
     PROTECT_CONTENT = True if getenv('PROTECT_CONTENT', "False") == "True" else False 
-    BACKUP_CHANNEL = int(getenv("BACKUP_CHANNEL", "-1002876087585"))
-    LOG_CHANNEL = int(getenv("LOG_CHANNEL", "-1003174074383"))
-    MAIN_CHANNEL = int(getenv("MAIN_CHANNEL", "-1002812370717"))
-    FILE_STORE = int(getenv("FILE_STORE", "-1002334590710"))
-    ADMINS = list(map(int, getenv("ADMINS", "5756495153").split()))
+    BACKUP_CHANNEL = int(getenv("BACKUP_CHANNEL", "-1003795761471"))
+    LOG_CHANNEL = int(getenv("LOG_CHANNEL", "-1002456565415"))
+    MAIN_CHANNEL = int(getenv("MAIN_CHANNEL", "-1003707099775"))
+    FILE_STORE = int(getenv("FILE_STORE", "-1003804286023"))
+    ADMINS = list(map(int, getenv("ADMINS", "8226767954").split()))
 
-    RSS_ITEMS = getenv("RSS_ITEMS", "").split()
+    RSS_ITEMS = getenv("RSS_ITEMS", "https://subsplease.org/rss/?r=1080").split()
     SEND_SCHEDULE = getenv("SEND_SCHEDULE", "True").lower() == "true"
-    BRAND_UNAME = getenv("BRAND_UNAME", "@cantarellabots")
+    BRAND_UNAME = getenv("BRAND_UNAME", "@Anime_Eternals")
 
     FFCODE_1080 = getenv("FFCODE_1080")
     FFCODE_720 = getenv("FFCODE_720")
