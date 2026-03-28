@@ -21,15 +21,15 @@ class Var:
     CUSTOM_BANNER = getenv("CUSTOM_BANNER", "https://ibb.co/5xjBCXKp")
 
     PROTECT_CONTENT = True if getenv('PROTECT_CONTENT', "False") == "True" else False 
-    BACKUP_CHANNEL = int(getenv("BACKUP_CHANNEL", "-1003795761471"))
-    LOG_CHANNEL = int(getenv("LOG_CHANNEL", "-1002456565415"))
-    MAIN_CHANNEL = int(getenv("MAIN_CHANNEL", "-1003707099775"))
-    FILE_STORE = int(getenv("FILE_STORE", "-1003804286023"))
+    BACKUP_CHANNEL = "-1003795761471"
+    LOG_CHANNEL = "-1002456565415"
+    MAIN_CHANNEL = "-1003707099775"
+    FILE_STORE = "-1003804286023"
     ADMINS = list(map(int, getenv("ADMINS", "8226767954").split()))
 
     RSS_ITEMS = getenv("RSS_ITEMS", "https://subsplease.org/rss/?r=1080").split()
     SEND_SCHEDULE = getenv("SEND_SCHEDULE", "True").lower() == "true"
-    BRAND_UNAME = getenv("BRAND_UNAME", "@Anime_Eternals")
+    BRAND_UNAME = "@Anime_Eternals"
 
     FFCODE_1080 = getenv("FFCODE_1080")
     FFCODE_720 = getenv("FFCODE_720")
