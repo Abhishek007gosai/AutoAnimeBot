@@ -13,7 +13,7 @@ class Var:
     BOT_TOKEN = getenv("BOT_TOKEN", "8691693420:AAGWJEvMm4x_HB_eK0ImiKRwz35tphgmZEM")
 
     # ✅ FIXED (important)
-    DB_URI = getenv("DB_URI", "mongodb+srv://nier88881:8qLsalGiPAvbwKTP@cluster0.od2tq6h.mongodb.net/")
+    DB_URI = getenv("DB_URI", "mongodb+srv://Kafka:Au3OoWzCDYJKeuHU@cluster0.lz2m8iy.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0")
     DB_NAME = getenv("DB_NAME", "cluster0")
 
     BAN_SUPPORT = getenv("BAN_SUPPORT", "https://t.me/EternalsHelplineBot")
