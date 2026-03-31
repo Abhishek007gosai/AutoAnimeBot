@@ -19,7 +19,7 @@ class Var:
     BAN_SUPPORT = getenv("BAN_SUPPORT", "https://t.me/EternalsHelplineBot")
     FSUB_LINK_EXPIRY = int(getenv("FSUB_LINK_EXPIRY", "120"))
 
-    CHANNEL_ID = int(getenv("CHANNEL_ID", "-1002456565415"))
+    CHANNEL_ID = int(getenv("CHANNEL_ID", "-1003568472008"))
     MHCHANNEL_URL = getenv("MHCHANNEL_URL", "https://t.me/+t0weAQsq_-1lYmJl")
 
     ANIME = getenv("ANIME", "Is It Wrong to Try to Pick Up Girls in a Dungeon?")
