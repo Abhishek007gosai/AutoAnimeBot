@@ -15,17 +15,17 @@ class Var:
     DB_NAME = "cluster0"
     BAN_SUPPORT = getenv("BAN_SUPPORT", "https://t.me/EternalsHelplineBot")
     FSUB_LINK_EXPIRY = int(getenv("FSUB_LINK_EXPIRY", "120"))
-    CHANNEL_ID = 
+    CHANNEL_ID = -1002456565415
     MHCHANNEL_URL = "https://t.me/+t0weAQsq_-1lYmJl"
     ANIME = getenv("ANIME", "Is It Wr2131ong to Try to Pi123ck Up Girls in a Dungeon?")
     CUSTOM_BANNER = getenv("CUSTOM_BANNER", "https://ibb.co/5xjBCXKp")
 
     PROTECT_CONTENT = True if getenv('PROTECT_CONTENT', "False") == "True" else False 
-    BACKUP_CHANNEL = -1003795761471
+    BACKUP_CHANNEL = -1003874984159
     LOG_CHANNEL = -1002456565415
-    MAIN_CHANNEL = -1003707099775
-    FILE_STORE = -1003804286023
-    ADMINS = list(map(int, getenv("ADMINS", "8226767954").split()))
+    MAIN_CHANNEL = -1003587010814
+    FILE_STORE = -1002456565415
+    ADMINS = list(map(int, getenv("ADMINS", "8786691721").split()))
 
     RSS_ITEMS = getenv("RSS_ITEMS", "https://subsplease.org/rss/?r=1080").split()
     SEND_SCHEDULE = getenv("SEND_SCHEDULE", "True").lower() == "true"
