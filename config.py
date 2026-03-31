@@ -10,7 +10,7 @@ LOGS = logging.getLogger(__name__)
 class Var:
     API_ID = int(getenv("API_ID", "29245477"))
     API_HASH = getenv("API_HASH", "0abc83883262245c90ca337b7a0375c4")
-    BOT_TOKEN = getenv("BOT_TOKEN", "8691693420:AAGWJEvMm4x_HB_eK0ImiKRwz35tphgmZEM")
+    BOT_TOKEN = getenv("BOT_TOKEN", "7686806902:AAGxlvsZGrOHCXPbS6qV3X_hJzr7VlrzwC8")
 
     # ✅ FIXED (important)
     DB_URI = getenv("DB_URI", "mongodb+srv://Kafka:Au3OoWzCDYJKeuHU@cluster0.lz2m8iy.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0")
