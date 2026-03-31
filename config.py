@@ -10,8 +10,8 @@ LOGS = logging.getLogger(__name__)
 class Var:
     API_ID = 29245477
     API_HASH = "0abc83883262245c90ca337b7a0375c4"
-    BOT_TOKEN = ""
-    DB_URI = 
+    BOT_TOKEN = "8691693420:AAGWJEvMm4x_HB_eK0ImiKRwz35tphgmZEM"
+    DB_URI = "mongodb+srv://nier88881:8qLsalGiPAvbwKTP@cluster0.od2tq6h.mongodb.net/"
     DB_NAME = "cluster0"
     BAN_SUPPORT = getenv("BAN_SUPPORT", "https://t.me/EternalsHelplineBot")
     FSUB_LINK_EXPIRY = int(getenv("FSUB_LINK_EXPIRY", "120"))
