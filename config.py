@@ -8,9 +8,9 @@ load_dotenv()
 LOGS = logging.getLogger(__name__)
 
 class Var:
-    API_ID = int(getenv("API_ID", "29245477"))
-    API_HASH = getenv("API_HASH", "0abc83883262245c90ca337b7a0375c4")
-    BOT_TOKEN = getenv("BOT_TOKEN", "7686806902:AAGxlvsZGrOHCXPbS6qV3X_hJzr7VlrzwC8")
+    API_ID = 29245477
+    API_HASH = "0abc83883262245c90ca337b7a0375c4"
+    BOT_TOKEN = "7686806902:AAGxlvsZGrOHCXPbS6qV3X_hJzr7VlrzwC8"
 
     # ✅ FIXED (important)
     DB_URI = getenv("DB_URI", "mongodb+srv://Kafka:Au3OoWzCDYJKeuHU@cluster0.lz2m8iy.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0")
@@ -19,25 +19,25 @@ class Var:
     BAN_SUPPORT = getenv("BAN_SUPPORT", "https://t.me/EternalsHelplineBot")
     FSUB_LINK_EXPIRY = int(getenv("FSUB_LINK_EXPIRY", "120"))
 
-    CHANNEL_ID = int(getenv("CHANNEL_ID", "-1003568472008"))
-    MHCHANNEL_URL = getenv("MHCHANNEL_URL", "https://t.me/+t0weAQsq_-1lYmJl")
+    CHANNEL_ID = -1003568472008
+    MHCHANNEL_URL = "https://t.me/+t0weAQsq_-1lYmJl"
 
     ANIME = getenv("ANIME", "Is It Wrong to Try to Pick Up Girls in a Dungeon?")
     CUSTOM_BANNER = getenv("CUSTOM_BANNER", "https://ibb.co/5xjBCXKp")
 
     PROTECT_CONTENT = getenv("PROTECT_CONTENT", "False").lower() == "true"
 
-    BACKUP_CHANNEL = int(getenv("BACKUP_CHANNEL", "-1003874984159"))
-    LOG_CHANNEL = int(getenv("LOG_CHANNEL", "-1002456565415"))
-    MAIN_CHANNEL = int(getenv("MAIN_CHANNEL", "-1003587010814"))
-    FILE_STORE = int(getenv("FILE_STORE", "-1002456565415"))
+    BACKUP_CHANNEL = -1003874984159
+    LOG_CHANNEL = -1002456565415
+    MAIN_CHANNEL = -1003587010814
+    FILE_STORE = -1002456565415
 
     ADMINS = list(map(int, getenv("ADMINS", "8786691721").split()))
 
     RSS_ITEMS = getenv("RSS_ITEMS", "https://subsplease.org/rss/?r=1080").split()
     SEND_SCHEDULE = getenv("SEND_SCHEDULE", "True").lower() == "true"
 
-    BRAND_UNAME = getenv("BRAND_UNAME", "")
+    BRAND_UNAME = getenv("BRAND_UNAME", "Nexus")
 
     FFCODE_1080 = getenv("FFCODE_1080")
     FFCODE_720 = getenv("FFCODE_720")
@@ -45,7 +45,7 @@ class Var:
     FFCODE_360 = getenv("FFCODE_360")
     FFCODE_HDRip = getenv("FFCODE_HDRip")
 
-    QUALS = getenv("QUALS", "480 720 1080 HDRip").split()
+    QUALS = getenv("QUALS", "480 720 1080").split()
 
     DISABLE_CHANNEL_BUTTON = getenv("DISABLE_CHANNEL_BUTTON", "False").lower() == "true"
     AS_DOC = getenv("AS_DOC", "True").lower() == "true"
