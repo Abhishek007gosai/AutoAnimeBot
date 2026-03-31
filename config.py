@@ -1,74 +1,82 @@
-# config.py
 from os import getenv
 from dotenv import load_dotenv
 import logging
 from logging.handlers import RotatingFileHandler
 
 load_dotenv()
+
 LOGS = logging.getLogger(__name__)
 
 class Var:
-    API_ID = 29245477
-    API_HASH = "0abc83883262245c90ca337b7a0375c4"
-    BOT_TOKEN = "8691693420:AAGWJEvMm4x_HB_eK0ImiKRwz35tphgmZEM"
-    DB_URI = "mongodb+srv://nier88881:8qLsalGiPAvbwKTP@cluster0.od2tq6h.mongodb.net/"
-    DB_NAME = "cluster0"
+    API_ID = int(getenv("API_ID", "29245477"))
+    API_HASH = getenv("API_HASH", "0abc83883262245c90ca337b7a0375c4")
+    BOT_TOKEN = getenv("BOT_TOKEN", "8691693420:AAGWJEvMm4x_HB_eK0ImiKRwz35tphgmZEM")
+
+    # ✅ FIXED (important)
+    DB_URI = getenv("DB_URI", "mongodb+srv://nier88881:8qLsalGiPAvbwKTP@cluster0.od2tq6h.mongodb.net/")
+    DB_NAME = getenv("DB_NAME", "cluster0")
+
     BAN_SUPPORT = getenv("BAN_SUPPORT", "https://t.me/EternalsHelplineBot")
     FSUB_LINK_EXPIRY = int(getenv("FSUB_LINK_EXPIRY", "120"))
-    CHANNEL_ID = -1002456565415
-    MHCHANNEL_URL = "https://t.me/+t0weAQsq_-1lYmJl"
-    ANIME = getenv("ANIME", "Is It Wr2131ong to Try to Pi123ck Up Girls in a Dungeon?")
+
+    CHANNEL_ID = int(getenv("CHANNEL_ID", "-1002456565415"))
+    MHCHANNEL_URL = getenv("MHCHANNEL_URL", "https://t.me/+t0weAQsq_-1lYmJl")
+
+    ANIME = getenv("ANIME", "Is It Wrong to Try to Pick Up Girls in a Dungeon?")
     CUSTOM_BANNER = getenv("CUSTOM_BANNER", "https://ibb.co/5xjBCXKp")
 
-    PROTECT_CONTENT = True if getenv('PROTECT_CONTENT', "False") == "True" else False 
-    BACKUP_CHANNEL = -1003874984159
-    LOG_CHANNEL = -1002456565415
-    MAIN_CHANNEL = -1003587010814
-    FILE_STORE = -1002456565415
+    PROTECT_CONTENT = getenv("PROTECT_CONTENT", "False").lower() == "true"
+
+    BACKUP_CHANNEL = int(getenv("BACKUP_CHANNEL", "-1003874984159"))
+    LOG_CHANNEL = int(getenv("LOG_CHANNEL", "-1002456565415"))
+    MAIN_CHANNEL = int(getenv("MAIN_CHANNEL", "-1003587010814"))
+    FILE_STORE = int(getenv("FILE_STORE", "-1002456565415"))
+
     ADMINS = list(map(int, getenv("ADMINS", "8786691721").split()))
 
     RSS_ITEMS = getenv("RSS_ITEMS", "https://subsplease.org/rss/?r=1080").split()
     SEND_SCHEDULE = getenv("SEND_SCHEDULE", "True").lower() == "true"
-    BRAND_UNAME = ""
+
+    BRAND_UNAME = getenv("BRAND_UNAME", "")
 
     FFCODE_1080 = getenv("FFCODE_1080")
     FFCODE_720 = getenv("FFCODE_720")
     FFCODE_480 = getenv("FFCODE_480")
     FFCODE_360 = getenv("FFCODE_360")
     FFCODE_HDRip = getenv("FFCODE_HDRip")
+
     QUALS = getenv("QUALS", "480 720 1080 HDRip").split()
 
-    DISABLE_CHANNEL_BUTTON = getenv("DISABLE_CHANNEL_BUTTON", None) == 'True'
+    DISABLE_CHANNEL_BUTTON = getenv("DISABLE_CHANNEL_BUTTON", "False").lower() == "true"
     AS_DOC = getenv("AS_DOC", "True").lower() == "true"
+
     THUMB = getenv("THUMB")
-    START_PIC = getenv("START_PIC","https://ibb.co/5xjBCXKp")
+    START_PIC = getenv("START_PIC", "https://ibb.co/5xjBCXKp")
     FORCE_PIC = getenv("FORCE_PIC", "https://ibb.co/5xjBCXKp")
 
 
-# ✅ Required variable validation (outside the class)
+# ✅ Required variable validation
 REQUIRED_VARS = ["API_ID", "API_HASH", "BOT_TOKEN", "DB_URI"]
+
 for var_name in REQUIRED_VARS:
     if not getattr(Var, var_name):
         LOGS.critical(f"Missing required environment variable: {var_name}")
         exit(1)
-        #--------------------------------------------
 
 
+# ✅ Logging Setup
 LOG_FILE_NAME = "log.txt"
 
 logging.basicConfig(
     level=logging.INFO,
     format="[%(asctime)s - %(levelname)s] - %(name)s - %(message)s",
-    datefmt='%d-%b-%y %H:%M:%S',
+    datefmt="%d-%b-%y %H:%M:%S",
     handlers=[
-        RotatingFileHandler(
-            LOG_FILE_NAME,
-            maxBytes=50000000,
-            backupCount=10
-        ),
+        RotatingFileHandler(LOG_FILE_NAME, maxBytes=50000000, backupCount=10),
         logging.StreamHandler()
     ]
 )
+
 logging.getLogger("pyrogram").setLevel(logging.WARNING)
 
 
