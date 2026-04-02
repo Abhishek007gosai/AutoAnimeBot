@@ -10,8 +10,8 @@ LOGS = logging.getLogger(__name__)
 class Var:
     API_ID = 29245477
     API_HASH = "0abc83883262245c90ca337b7a0375c4"
-    BOT_TOKEN = "7686806902:AAFxtkOXImkysMWflECD405x_w1k03DgkPE"
-    DB_URI = "mongodb+srv://Kafka:Au3OoWzCDYJKeuHU@cluster0.lz2m8iy.mongodb.net/?retryWrites=true&w=majority"
+    BOT_TOKEN = ""
+    DB_URI = ""
     DB_NAME = "cluster0"
     BAN_SUPPORT = getenv("BAN_SUPPORT", "https://t.me/about_zani")
     FSUB_LINK_EXPIRY = int(getenv("FSUB_LINK_EXPIRY", "120"))
